@@ -41,7 +41,8 @@
           "icon": "arrow",
           "text": "Actualmente en formación en ciberseguridad (Certificado de Profesionalidad Nivel 3 SOIB), ampliando mi perspectiva en prácticas de desarrollo seguro y análisis de vulnerabilidades."
         }
-      ]
+      ],
+      "cv_download": "Descargar CV"
     },
     "experience": {
       "terminal_command": "juliosn@portfolio:~$ ./career.sh --timeline",

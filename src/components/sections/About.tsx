@@ -6,6 +6,7 @@ import TerminalWindow from '@/components/TerminalWindow';
 import { ANIMATION_DELAYS } from '@/constants/animations';
 import { useAOSVisibility } from '@/hooks/useAOSVisibility';
 import { motion } from 'framer-motion';
+import { Download } from 'lucide-react';
 import { useCallback, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
@@ -97,6 +98,23 @@ export default function About() {
                   </motion.div>
                 ))}
               </div>
+
+              {/* CV Download */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.2 + highlights.length * 0.15 }}
+                className="mt-8"
+              >
+                <a
+                  href="/CV-Julio.pdf"
+                  download="CV-Julio.pdf"
+                  className="inline-flex items-center gap-2 rounded border border-gopher-blue px-4 py-2 text-sm text-gopher-blue transition-colors hover:bg-gopher-blue hover:text-black"
+                >
+                  <Download className="h-4 w-4" />
+                  {t('cv_download')}
+                </a>
+              </motion.div>
             </div>
               )}
             </TerminalWindow>
