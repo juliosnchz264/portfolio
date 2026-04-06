@@ -18,7 +18,7 @@ export default async function StructuredData({ type = 'all', locale }: Structure
     jobTitle: t('personal_info.title'),
     description: t('sections.hero.description'),
     url: baseUrl,
-    image: `${baseUrl}/profile-image.webp`,
+    image: `${baseUrl}/images/profile/normal.webp`,
     sameAs: [
       'https://github.com/juliosnchz264',
       'https://www.linkedin.com/in/julio-s%C3%A1nchez-aniceto-453738276/',

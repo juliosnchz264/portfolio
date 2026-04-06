@@ -20,8 +20,6 @@ export async function generateMetadata({
 
   const baseUrl = 'https://juliosn.dev'; // TODO: update with your actual domain
   const currentUrl = `${baseUrl}/${locale}`;
-  const profileImageUrl = `${baseUrl}/profile-image.webp`;
-
   const title = `${t('personal_info.full_name')} - ${t('personal_info.title')}`;
   const description = t('sections.hero.description');
 
@@ -57,20 +55,11 @@ export async function generateMetadata({
       siteName: `${t('personal_info.full_name')} - Portfolio`,
       title,
       description,
-      images: [
-        {
-          url: profileImageUrl,
-          width: 400,
-          height: 400,
-          alt: `${t('personal_info.full_name')} - ${t('personal_info.title')}`,
-        },
-      ],
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title,
       description,
-      images: [profileImageUrl],
       creator: '@juliosnchz264',
     },
     robots: {
