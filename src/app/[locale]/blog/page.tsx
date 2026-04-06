@@ -8,6 +8,7 @@ import { isValidLocale } from '@/lib/blog/utils';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { redirect } from 'next/navigation';
+import { baseUrl } from '@/lib/site';
 
 interface BlogIndexProps {
   params: Promise<{ locale: string }>;
@@ -65,12 +66,12 @@ export async function generateMetadata({ params }: BlogIndexProps): Promise<Meta
     title: `${title} | juliosn`,
     description,
     keywords: ['web development', 'programming', 'php', 'javascript', 'laravel', 'cybersecurity', 'blog'],
-    authors: [{ name: 'Julio Sánchez Aniceto', url: 'https://juliosn.dev' }],
+    authors: [{ name: 'Julio Sánchez Aniceto', url: baseUrl }],
     creator: 'Julio Sánchez Aniceto',
     openGraph: {
       type: 'website',
       siteName: 'juliosn Blog',
-      url: `https://juliosn.dev/${locale}/blog`,
+      url: `${baseUrl}/${locale}/blog`,
       title,
       description,
       locale: locale === 'es' ? 'es_ES' : 'en_US',

@@ -1,5 +1,6 @@
 import StructuredData from '@/components/StructuredData';
 import { routing } from '@/i18n/routing';
+import { baseUrl } from '@/lib/site';
 
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
@@ -18,7 +19,6 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale });
 
-  const baseUrl = 'https://juliosn.dev'; // TODO: update with your actual domain
   const currentUrl = `${baseUrl}/${locale}`;
   const title = `${t('personal_info.full_name')} - ${t('personal_info.title')} | Portfolio`;
   const description = t('sections.hero.description');

@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import { getTranslations } from 'next-intl/server';
+import { siteHostname } from '@/lib/site';
 
 export const alt = 'Julio Sánchez Aniceto - Junior Web Developer | Portfolio';
 export const size = { width: 1200, height: 630 };
@@ -15,11 +15,14 @@ export default async function Image({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale });
 
-  const name = t('personal_info.full_name');
-  const jobTitle = t('personal_info.title');
-  const description = t('sections.hero.description');
+  // Import messages directly — getTranslations() requires request context
+  // which is not available in opengraph-image routes.
+  const messages = (await import(`@/i18n/messages/${locale}.json`)).default;
+
+  const name: string = messages.personal_info.full_name;
+  const jobTitle: string = messages.personal_info.title;
+  const description: string = messages.sections.hero.description;
   const cta = locale === 'es' ? '→ Ver Portfolio' : '→ View Portfolio';
 
   return new ImageResponse(
@@ -117,7 +120,7 @@ export default async function Image({
             }}
           >
             <span style={{ color: '#39D353', fontSize: 18, fontFamily: 'monospace' }}>
-              juliosn.dev
+              {siteHostname}
             </span>
             <span style={{ color: '#00ADD8', fontSize: 18, fontFamily: 'monospace' }}>
               {cta}

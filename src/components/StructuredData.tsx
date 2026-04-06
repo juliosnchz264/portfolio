@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { baseUrl } from '@/lib/site';
 
 interface StructuredDataProps {
   type?: 'person' | 'website' | 'breadcrumb' | 'all';
@@ -8,7 +9,6 @@ interface StructuredDataProps {
 export default async function StructuredData({ type = 'all', locale }: StructuredDataProps) {
   const t = await getTranslations({ locale });
 
-  const baseUrl = 'https://juliosn.dev'; // TODO: update with your actual domain
   const currentUrl = `${baseUrl}/${locale}`;
 
   const personSchema = {

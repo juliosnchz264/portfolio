@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og';
 import { getAllPosts, getPostBySlug } from '@/lib/blog/posts';
 import { isValidLocale } from '@/lib/blog/utils';
+import { siteHostname } from '@/lib/site';
 
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
@@ -134,7 +135,7 @@ export default async function Image({
           }}
         >
           <span style={{ color: '#39D353', fontSize: 20, fontFamily: 'monospace' }}>
-            juliosn.dev/blog
+            {siteHostname}/blog
           </span>
           <span style={{ color: '#555555', fontSize: 16, fontFamily: 'monospace' }}>
             Julio Sánchez Aniceto
