@@ -20,7 +20,7 @@ export async function generateMetadata({
 
   const baseUrl = 'https://juliosn.dev'; // TODO: update with your actual domain
   const currentUrl = `${baseUrl}/${locale}`;
-  const title = `${t('personal_info.full_name')} - ${t('personal_info.title')}`;
+  const title = `${t('personal_info.full_name')} - ${t('personal_info.title')} | Portfolio`;
   const description = t('sections.hero.description');
 
   return {
