@@ -1,0 +1,23 @@
+{
+  "id": "sonnet-haiku",
+  "slug": {
+    "en": "sonnet-haiku-duality",
+    "es": "dualidad-sonnet-haiku"
+  },
+  "title": {
+    "en": "Duality of Sonnet and Haiku",
+    "es": "Dualidad de Sonnet y Haiku"
+  },
+  "description": {
+    "en": "Haiku 4.5 doesn't replace Sonnet—it complements it. Discover the new workflow that combines both models to maximize efficiency and minimize costs in Claude Code.",
+    "es": "Haiku 4.5 no reemplaza a Sonnet—lo complementa. Descubre el nuevo flujo de trabajo que combina ambos modelos para maximizar eficiencia y minimizar costos en Claude Code."
+  },
+  "publishedAt": "2025-10-20",
+  "updatedAt": "2025-10-28",
+  "tags": ["ai", "claude", "development", "workflow"],
+  "featured": true,
+  "readingTime": {
+    "en": 3,
+    "es": 4
+  }
+}

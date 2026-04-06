@@ -1,0 +1,245 @@
+/* DynamicProfilePicture Styles */
+.dpp-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Size variants */
+.dpp-size-sm {
+  width: 112px;
+  height: 151px;
+}
+
+.dpp-size-md {
+  width: 168px;
+  height: 227px;
+}
+
+.dpp-size-lg {
+  width: 224px;
+  height: 302px;
+}
+
+/* Image layers */
+.dpp-image-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.1s ease-out;
+}
+
+.dpp-image-normal {
+  z-index: 2;
+}
+
+.dpp-image-ascii {
+  z-index: 1;
+}
+
+/* State visibility */
+.dpp-state-normal .dpp-image-normal {
+  opacity: 1;
+}
+
+.dpp-state-normal .dpp-image-ascii {
+  opacity: 0;
+}
+
+.dpp-state-ascii .dpp-image-normal {
+  opacity: 0;
+}
+
+.dpp-state-ascii .dpp-image-ascii {
+  opacity: 1;
+}
+
+.dpp-state-split-diagonal .dpp-image-normal {
+  opacity: 1;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.dpp-state-split-diagonal .dpp-image-ascii {
+  opacity: 1;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.dpp-state-split-vertical .dpp-image-normal {
+  opacity: 1;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.dpp-state-split-vertical .dpp-image-ascii {
+  opacity: 1;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+/* Transition effects */
+.dpp-transition-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 173, 216, 0.1) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(0, 173, 216, 0.1) 75%,
+    transparent 100%
+  );
+  animation: dpp-scanline 0.15s ease-in-out;
+}
+
+.dpp-transitioning .dpp-transition-overlay {
+  opacity: 1;
+}
+
+.dpp-transitioning .dpp-image-layer {
+  filter: brightness(1.2) contrast(1.1);
+  animation: dpp-flicker 0.15s ease-in-out;
+}
+
+/* Transition animations */
+@keyframes dpp-scanline {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes dpp-flicker {
+  0% {
+    filter: brightness(1) contrast(1) hue-rotate(0deg);
+  }
+  25% {
+    filter: brightness(1.3) contrast(1.2) hue-rotate(5deg);
+  }
+  50% {
+    filter: brightness(0.8) contrast(1.4) hue-rotate(-5deg);
+  }
+  75% {
+    filter: brightness(1.1) contrast(1.1) hue-rotate(2deg);
+  }
+  100% {
+    filter: brightness(1) contrast(1) hue-rotate(0deg);
+  }
+}
+
+/* Loading state */
+.dpp-loading {
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dpp-loading::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  border-top: 2px solid #00add8;
+  border-radius: 50%;
+  animation: dpp-spin 1s linear infinite;
+}
+
+@keyframes dpp-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error state */
+.dpp-error {
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .dpp-container,
+  .dpp-image-layer,
+  .dpp-transition-overlay {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .dpp-transitioning .dpp-image-layer {
+    filter: none !important;
+  }
+
+  .dpp-transitioning .dpp-transition-overlay {
+    opacity: 0 !important;
+  }
+}
+
+/* Paused state styling */
+.dpp-paused {
+  outline: 2px solid #00add8;
+  outline-offset: 2px;
+}
+
+/* Focus states for keyboard navigation (only when not paused) */
+.dpp-container:focus:not(.dpp-paused) {
+  outline: 1px dotted #00add8;
+  outline-offset: 2px;
+}
+
+.dpp-container:focus-visible:not(.dpp-paused) {
+  outline: 1px dotted #00add8;
+  outline-offset: 2px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .dpp-container {
+    border-radius: 6px;
+  }
+
+  .dpp-size-md {
+    width: 168px;
+    height: 227px;
+  }
+
+  .dpp-size-lg {
+    width: 202px;
+    height: 272px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .dpp-paused {
+    outline: 3px solid #00add8;
+  }
+
+  .dpp-container:focus:not(.dpp-paused) {
+    outline: 2px dotted #00add8;
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "language": "es",
+  "personal_info": {
+    "full_name": "Julio Sánchez Aniceto",
+    "username": "juliosn",
+    "title": "Desarrollador Web Junior",
+    "age": "23",
+    "experience_years": "2",
+    "specialization": "Desarrollo Web Full Stack",
+    "preference": "PHP, JavaScript, Laravel, Ciberseguridad"
+  },
+  "sections": {
+    "hero": {
+      "terminal_welcome": "juliosn@portfolio:~$ echo 'Hola mundo!'",
+      "name": "Julio Sánchez Aniceto",
+      "title": "Desarrollador Web Junior",
+      "description": "Desarrollo aplicaciones web con código limpio y diseño responsivo. Actualmente especializándome en ciberseguridad y prácticas de desarrollo web seguro.",
+      "specialties": [
+        "Desarrollo Full Stack",
+        "PHP & JavaScript",
+        "MySQL & MongoDB",
+        "Ciberseguridad"
+      ],
+      "cta": "Explora mi trabajo y experiencia"
+    },
+    "about": {
+      "terminal_command": "juliosn@portfolio:~$ cat sobre_mi.txt",
+      "title": "Sobre mí",
+      "badges": ["Desarrollador Web", "PHP", "JavaScript", "Ciberseguridad"],
+      "intro": "Desarrollador web junior con base en Palma, España, formado en Desarrollo de Aplicaciones Web (DAW). Construyo aplicaciones web utilizando tecnologías modernas de frontend y backend, y actualmente me estoy especializando en ciberseguridad con foco en el desarrollo seguro y el análisis de vulnerabilidades.",
+      "highlights": [
+        {
+          "icon": "star",
+          "text": "Disfruto construyendo aplicaciones web desde cero, trabajando a lo largo del stack completo. Soy apasionado del código limpio, mantenible y el diseño responsivo."
+        },
+        {
+          "icon": "diamond",
+          "text": "Mi enfoque es práctico: entender el problema, elegir la herramienta correcta y construir una solución sólida. He trabajado con PHP, JavaScript, Laravel, React, MySQL, MongoDB y más."
+        },
+        {
+          "icon": "arrow",
+          "text": "Actualmente en formación en ciberseguridad (Certificado de Profesionalidad Nivel 3 SOIB), ampliando mi perspectiva en prácticas de desarrollo seguro y análisis de vulnerabilidades."
+        }
+      ]
+    },
+    "experience": {
+      "terminal_command": "juliosn@portfolio:~$ ./career.sh --timeline",
+      "title": "Experiencia",
+      "jobs": [
+        {
+          "company": "Refinería Web",
+          "position": "Desarrollador Web Junior",
+          "period": "Marzo 2024 - Junio 2024",
+          "type": "Prácticas",
+          "website_url": "",
+          "achievements": [
+            "Desarrollé aplicaciones web desde cero utilizando tecnologías de frontend y backend",
+            "Implementé mejoras y nuevas funcionalidades en sitios WordPress existentes",
+            "Optimicé el rendimiento de sitios web y aseguré un diseño responsivo en múltiples dispositivos",
+            "Participé en el ciclo completo de desarrollo, desde los requisitos hasta el despliegue"
+          ],
+          "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "PHP",
+            "WordPress",
+            "Bootstrap",
+            "React",
+            "Git"
+          ],
+          "highlights": "Desarrollo web completo en un entorno profesional real, cubriendo frontend y backend"
+        },
+        {
+          "company": "ITCM Solutions",
+          "position": "Desarrollador Web Junior",
+          "period": "Febrero 2022 - Abril 2022",
+          "type": "Prácticas",
+          "website_url": "",
+          "achievements": [
+            "Gestioné y realicé consultas en bases de datos MySQL",
+            "Maqueté plantillas web responsivas para la venta de hardware en eBay",
+            "Colaboré en la gestión de inventario integrando información de productos físicos",
+            "Garanticé una maquetación consistente y usable en diferentes resoluciones"
+          ],
+          "technologies": [
+            "HTML",
+            "CSS",
+            "PHP",
+            "MySQL",
+            "Bootstrap",
+            "Git"
+          ],
+          "highlights": "Desarrollo web para comercio electrónico y gestión de bases de datos para ventas de hardware"
+        }
+      ],
+      "labels": {
+        "highlight": "Destacado",
+        "achievements": "Logros principales",
+        "tech_stack": "Stack tecnológico"
+      }
+    },
+    "skills": {
+      "terminal_command": "juliosn@portfolio:~$ cat ./skills_inventory.json | jq .",
+      "title": "Habilidades",
+      "categories": {
+        "conceptual": {
+          "name": "Conceptos & Principios",
+          "skills": [
+            "Diseño Web Responsivo",
+            "Principios de Código Limpio",
+            "Diseño de API RESTful",
+            "Arquitectura MVC",
+            "Programación Orientada a Objetos",
+            "Diseño de Bases de Datos",
+            "Desarrollo Seguro",
+            "Control de Versiones"
+          ]
+        },
+        "technical": {
+          "name": "Habilidades Técnicas",
+          "skills": [
+            "PHP",
+            "JavaScript",
+            "Laravel",
+            "React",
+            "Python",
+            "MySQL",
+            "MongoDB",
+            "HTML & CSS",
+            "Bootstrap",
+            "Tailwind CSS",
+            "WordPress",
+            "Docker",
+            "Git & GitHub",
+            "Linux"
+          ]
+        }
+      },
+      "highlighted_languages": ["PHP", "JavaScript"],
+      "highlighted_skills": [
+        "PHP",
+        "JavaScript",
+        "Laravel",
+        "React",
+        "MySQL",
+        "HTML & CSS",
+        "Docker",
+        "Git & GitHub",
+        "Linux",
+        "WordPress"
+      ],
+      "expertise_level": "2+ años de experiencia académica y profesional",
+      "labels": {
+        "overview": "RESUMEN DE HABILIDADES",
+        "specialization": "Especialidad",
+        "main_languages": "Lenguajes principales",
+        "backend_development": "Desarrollo backend"
+      }
+    },
+    "projects": {
+      "terminal_command": "juliosn@portfolio:~$ ls projects/ -la",
+      "title": "Proyectos",
+      "status": "coming_soon",
+      "message": "Actualmente trabajando en proyectos personales que estarán disponibles próximamente.",
+      "placeholder_content": "Esta sección se actualizará con proyectos destacados en desarrollo."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": {
+        "title": "Blog Personal",
+        "content": "Insights técnicos, experiencias de desarrollo y reflexiones sobre desarrollo web y ciberseguridad.",
+        "link_text": "Leer todas las entradas →"
+      },
+      "no_posts": "No hay entradas disponibles aún. ¡Regresa pronto!",
+      "page": {
+        "title": "Blog Personal",
+        "description": "Insights técnicos, experiencias de desarrollo y reflexiones sobre desarrollo web y ciberseguridad. Notas sobre PHP, JavaScript, Laravel y prácticas de desarrollo seguro."
+      },
+      "post": {
+        "back_to_blog": "← Volver al blog",
+        "updated": "Actualizado",
+        "footer": {
+          "enjoyed": "¿Te gustó este post? ",
+          "share_knowledge": "¡Compártelo!"
+        }
+      },
+      "filter": {
+        "search_placeholder": "Buscar posts...",
+        "filter_by": "Filtrar por:",
+        "showing": "Mostrando",
+        "of": "de",
+        "posts": "posts",
+        "active_tags": "tags activos",
+        "clear_filters": "Limpiar filtros",
+        "no_posts_found": "No se encontraron posts",
+        "no_posts_subtitle": "Prueba ajustando los filtros o vuelve más tarde."
+      },
+      "post_card": {
+        "featured": "Destacado"
+      },
+      "code_block": {
+        "copy": "copiar"
+      }
+    },
+    "contact": {
+      "terminal_command": "juliosn@portfolio:~$ ping @juliosnchz264",
+      "title": "Contacto",
+      "header": {
+        "title": "Contáctame",
+        "subtitle": "¿Tienes alguna pregunta o quieres colaborar? ¡Envíame un mensaje!"
+      },
+      "form": {
+        "title": "contact-form.sh",
+        "fields": {
+          "name": "Nombre",
+          "email": "Email",
+          "subject": "Asunto",
+          "message": "Mensaje"
+        },
+        "submit": "Enviar",
+        "placeholders": {
+          "name": "Tu nombre completo",
+          "email": "tu.email@ejemplo.com",
+          "subject": "Asunto del mensaje",
+          "message": "Escribe tu mensaje aquí..."
+        },
+        "errors": {
+          "name": {
+            "required": "Campo requerido"
+          },
+          "email": {
+            "required": "Campo requerido",
+            "invalid": "Email inválido"
+          },
+          "subject": {
+            "required": "Campo requerido"
+          },
+          "message": {
+            "required": "Campo requerido"
+          }
+        }
+      },
+      "social": {
+        "section_title": "Redes Sociales",
+        "links": [
+          {
+            "platform": "GitHub",
+            "url": "https://github.com/juliosnchz264",
+            "description": "Código y proyectos"
+          },
+          {
+            "platform": "LinkedIn",
+            "url": "https://www.linkedin.com/in/julio-s%C3%A1nchez-aniceto-453738276/",
+            "description": "Perfil profesional"
+          }
+        ],
+        "footer": "Estoy abierto a nuevas oportunidades y colaboraciones, un mensaje puede cambiarlo todo."
+      }
+    }
+  },
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "not_found": {
+    "title": "404 - Página no encontrada",
+    "heading": "¡Ups! Página no encontrada",
+    "description": "La página que buscas no existe o ha sido movida.",
+    "go_home": "Volver al inicio",
+    "go_blog": "Ver publicaciones del blog"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "zero-to-portfolio",
+  "slug": {
+    "en": "portfolio-development-process",
+    "es": "proceso-desarrollo-portfolio"
+  },
+  "title": {
+    "en": "Documenting My portfolio development process",
+    "es": "Documentando mi proceso de desarrollo del portfolio"
+  },
+  "description": {
+    "en": "A walkthrough of the AI workflow I used to build this portfolio, from initial concept to final implementation. An open documentation of how I collaborate with AI in development.",
+    "es": "Un recorrido del flujo de trabajo con IA que usé para construir este portfolio, desde el concepto inicial hasta la implementación final. Una documentación abierta de cómo colaboro con IA en el desarrollo."
+  },
+  "publishedAt": "2025-09-20",
+  "updatedAt": "2025-09-20",
+  "tags": ["ai", "portfolio", "development", "workflow"],
+  "featured": false,
+  "hidden": true,
+  "readingTime": {
+    "en": 3,
+    "es": 3
+  }
+}

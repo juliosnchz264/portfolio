@@ -1,0 +1,69 @@
+# The Sonnet and Haiku Duality: A New Workflow in Claude Code
+
+Claude Code just got significantly more efficient thanks to Haiku 4.5, for exactly the reasons you'd expect.
+
+## New Players in Town
+
+A month ago, Claude Sonnet 4.5 was released—Anthropic's new flagship model that came to replace Opus 4.1. Two weeks later came Haiku 4.5: ~90% of Sonnet's capabilities, twice as fast at a third of the cost.
+
+Impressive numbers, but the real innovation isn't Haiku itself—it's how it integrates with the ecosystem.
+
+Alongside Haiku 4.5 came a new built-in subagent specialized in code exploration, designed specifically to leverage this model's strengths.
+
+## Plan Smart, Execute Fast
+
+When you select Haiku 4.5 in Claude Code and enable plan mode, it automatically switches to Sonnet 4.5 for planning, then back to Haiku 4.5 for implementation once the plan is approved.
+
+This isn't a bug. It's the workflow Anthropic wants you to use:
+
+1. Plan with Sonnet: Better reasoning, moderate cost.
+2. Execute with Haiku: Rocket speed, lower cost.
+
+### Why use this workflow?
+
+Haiku 4.5 excels at mechanical work and tasks with defined scope. Where it falls short is in the big picture: architectural decisions, tradeoffs between options, and—dare I say—bad development habits. Real example from my experience: it finishes a feature and immediately wants to commit, without checking if the code actually works.
+
+Sonnet is more elegant for development. It plans better, considers edge cases, structures more carefully. However, it's slower and more expensive for generating lines of code in repetitive patterns.
+
+Combine them and you get the best of both worlds.
+
+## What About Opus?
+
+You might think Opus is now obsolete, overshadowed by the newer versions of Sonnet and Haiku. The answer couldn't be further from the truth.
+
+My theory is that Anthropic discourages it due to the cost it represents. Long-time Claude Code users will know there used to be a mode where you could plan with Opus and execute with Sonnet—well, it didn't disappear, IT STILL EXISTS! Anthropic just hid it a bit...
+Just type `/model opusplan` in Claude Code's interactive chat and you'll have it back just as you remember it. You're welcome.
+
+## Practical Implications
+
+These changes let you build much more efficient agentic workflows in terms of cost and latency.
+
+Before:
+
+- Plan and execute with Opus: Best analysis and results overall, much slower and expensive.
+- Plan and execute with Sonnet: Balanced, but might lack reasoning power for complex tasks.
+- Plan with Opus and execute with Sonnet: Best of both worlds, but Opus is overkill for many tasks.
+
+Now:
+
+- Simple feature: Haiku.
+- Standard feature: Plan with Sonnet, execute with Haiku.
+- Complex development: Plan with Opus (leveraging the explore subagent to save costs), execute with Sonnet.
+
+## Conclusions
+
+Haiku 4.5 doesn't replace Sonnet 4.5—it complements it. And that complementarity, this game-changing shift in how you use Claude Code, is what makes this release truly valuable.
+
+Next time you're about to build something, ask yourself: do I need to think or execute? At what complexity level? You now have the perfect model for each scenario.
+
+## Update 10-27-2025 v2.0.28
+
+Claude Code just launched the `Plan` agent, and it's a game-changer once again.
+
+This agent, powered by Sonnet, activates automatically when you use plan mode. Its job is to do all the heavy analysis before presenting you with a plan to approve or reject.
+
+This means the Sonnet-plans-Haiku-executes workflow has become even more efficient in terms of tokens used in the context window. How cool is that!
+
+Downsides? It seems the Opus-plans-Sonnet-executes workflow has lost steam, even meaning. The idea was to assign the reasoning and planning task to a smarter model like Opus and execute with a cheaper model, Sonnet. But if Sonnet is actually doing the work when planning with Opus, where does that leave Opus now?
+
+Although the patch notes indicate Claude can decide which model to use for launching subagents, does that mean it's possible to tell it to use Opus for this subagent? It'll be fun to experiment with this new update and the new subagent.

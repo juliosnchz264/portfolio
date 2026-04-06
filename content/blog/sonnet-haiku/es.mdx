@@ -1,0 +1,69 @@
+# La Dualidad de Sonnet y Haiku: Un nuevo flujo de trabajo en Claude Code
+
+Claude Code acaba de volverse mucho más eficiente gracias a Haiku 4.5, exactamente por las razones que imaginas.
+
+## Nuevos protagonistas
+
+Hace un mes fue lanzado Claude Sonnet 4.5, el nuevo modelo a la vanguardia de Anthropic que llegó a remplazar Opus 4.1. Dos semanas después, Haiku 4.5: ~90% de las capacidades de Sonnet, el doble de rápido a un tercio del costo.
+
+Números que impresionan, pero la verdadera innovación no es Haiku en sí mismo, es cómo se integra con el ecosistema.
+
+Junto con Haiku 4.5 llegó un nuevo subagente _built-in_ especializado en exploraciones de código, diseñado específicamente para aprovechar las fortalezas de este modelo.
+
+## Planear con inteligencia, implementar con velocidad
+
+Cuando seleccionas Haiku 4.5 en Claude Code y activas el modo plan, automáticamente cambia a Sonnet 4.5 para la planeación, volviendo a Haiku 4.5 para la implementación una vez aprobado el plan.
+
+No es un error. Es el flujo de trabajo que Anthropic quiere que uses:
+
+1. Planea con Sonnet: Mejor razonamiento, coste moderado.
+2. Ejecuta con Haiku: Velocidad de cohete, menor costo.
+
+### ¿Por qué usar este flujo?
+
+Haiku 4.5 es excelente para trabajo mecánico y/o con alcance definido. Donde flaquea es en la visión general del proyecto: decisiones arquitectónicas, compensaciones entre opciones y—me atrevo a decir—malos hábitos de desarrollo. Ejemplo real de mi experiencia: termina un feature e inmediatamente quiere hacer commit, sin verificar que el código funcione.
+
+Sonnet es más elegante para desarrollar. Planea mejor, contempla casos especiales, estructura con más cuidado, sin embargo, es más lento y caro para generar líneas de código en patrones repetitivos.
+
+Combínalos y tienes lo mejor de ambos mundos.
+
+## ¿Y Opus?
+
+Posiblemente pienses que Opus ya no sirve entonces y fue opacado por las versiones más nuevas de Sonnet y Haiku, la respuesta no puede estar más lejos de la realidad.
+
+Mi teoría es que Anthropic lo desincentiva probablemente por el costo que supone, quienes lleven tiempo usando Claude Code sabrán que existía un modo donde se podía planear con Opus y ejecutar con Sonnet, pues no existía, ¡SIGUE EXISTIENDO! Anthropic lo escondió un poco...
+Solo ingresa `/model opusplan` en el chat interactivo de Claude Code y ahí lo tendrás tal como lo recuerdas, de nada.
+
+## Implicaciones prácticas
+
+Estos cambios te permiten armar flujos de trabajo mucho más eficientes con agentes en términos de costos y latencia.
+
+Antes:
+
+- Planeas y ejecutas con Opus: Mejores análisis y resultados en general, mucho más lento y caro.
+- Planeas y ejecutas con Sonnet: Balanceado, pero pudiera carecer de razonamiento en tareas más complejas.
+- Planeas con Opus y ejecutas con Sonnet, lo mejor de ambos mundos, pero Opus es excesivo en muchas tareas.
+
+Ahora:
+
+- Funcionalidad simple: Haiku.
+- Feature estándar: Planeas con Sonnet y ejecutas con Haiku.
+- Desarrollo complejo: planeas con Opus (aprovechando el subagente explore para ahorrar costos), ejecutas con Sonnet.
+
+## Conclusiones
+
+Haiku 4.5 no reemplaza a Sonnet 4.5, lo complementa. Y esa complementariedad, este cambio de las reglas del juego de como se usa Claude Code es lo que hace verdaderamente valioso este lanzamiento.
+
+La próxima vez que vayas a desarrollar algo, pregúntate: ¿necesito pensar o ejecutar? ¿A qué nivel de complejidad? Ahora tienes el modelo perfecto para cada escenario.
+
+## Actualización 27-10-2025 v2.0.28
+
+Claude Code acaba de lanzar el agente `Plan`, y cambia el juego nuevamente.
+
+Este agente, potenciado por Sonnet, se activa automáticamente cuando usas el modo plan. Su trabajo es hacer todo el análisis pesado antes de presentarte un plan para aprobar o rechazar.
+
+Esto quiere decir que el flujo de planear con Sonnet y ejecutar con Haiku se ha vuelto incluso más eficiente en términos de tokens usados en la ventana de contexto, ¡Que maravilla!
+
+¿Contras? Parece que el flujo de planear con Opus y ejecutar con Sonnet ha perdido fuerza, incluso sentido. La idea es asignar la tarea de razonar, planear a un modelo más inteligente como Opus y ejecutar con un modelo más barato, Sonnet; si entonces al planear con Opus es Sonnet quien realmente está haciendo el trabajo, ¿En qué posición queda Opus ahora?
+
+Aunque las notas del parche indican que Claude puede decidir con que modelo lanzar los sub-agentes, ¿Entonces será posible indicarle que use Opus para este subagente? Será divertido ponerse a experimentar con esta nueva update y el nuevo sub-agente.
