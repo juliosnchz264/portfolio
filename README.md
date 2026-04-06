@@ -1,4 +1,4 @@
-# DieGopherLT Portfolio
+# Julio Portfolio
 
 A personal portfolio website with a terminal-inspired aesthetic, combining modern web development with Unix philosophy principles.
 
