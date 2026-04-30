@@ -14,10 +14,12 @@ interface NavigationProps {
   className?: string;
 }
 
+const NAV_HREFS = NAV_ITEMS.map(item => item.href);
+
 export default function Navigation({ className = '' }: NavigationProps) {
   const t = useTranslations('navigation');
   const { isMobileMenuOpen, toggleMobileMenu } = useMobileMenu();
-  const activeSection = useActiveSection(NAV_ITEMS.map(item => item.href));
+  const activeSection = useActiveSection(NAV_HREFS);
 
   return (
     <motion.nav

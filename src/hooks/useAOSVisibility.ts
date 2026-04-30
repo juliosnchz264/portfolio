@@ -7,9 +7,12 @@ interface UseAOSVisibilityOptions {
   offset?: number;
 }
 
+export const SKIP_ANIMATIONS_EVENT = 'skip-section-animations';
+
 export function useAOSVisibility(options: UseAOSVisibilityOptions = {}) {
   const [isVisible, setIsVisible] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
+  const [eagerReveal, setEagerReveal] = useState(false);
   const elementRef = useRef<HTMLElement>(null);
 
   const { threshold = 0.3, offset = 100 } = options;
@@ -22,7 +25,6 @@ export function useAOSVisibility(options: UseAOSVisibilityOptions = {}) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Small delay for AOS animation to start first
           setTimeout(() => setShouldRender(true), 100);
         }
       },
@@ -39,9 +41,20 @@ export function useAOSVisibility(options: UseAOSVisibilityOptions = {}) {
     };
   }, [threshold, offset]);
 
+  useEffect(() => {
+    const handler = () => {
+      setIsVisible(true);
+      setShouldRender(true);
+      setEagerReveal(true);
+    };
+    window.addEventListener(SKIP_ANIMATIONS_EVENT, handler);
+    return () => window.removeEventListener(SKIP_ANIMATIONS_EVENT, handler);
+  }, []);
+
   return {
     ref: elementRef,
     isVisible,
     shouldRender,
+    eagerReveal,
   };
 }

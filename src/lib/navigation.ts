@@ -1,5 +1,10 @@
+import { SKIP_ANIMATIONS_EVENT } from '@/hooks/useAOSVisibility';
+
 /**
- * Scrolls to a section identified by a CSS selector (e.g., '#about')
+ * Scrolls to a section identified by a CSS selector (e.g., '#about').
+ * Forces all sections to render their full content first so layout is stable
+ * before computing the scroll target — prevents drift caused by lazy renders.
+ *
  * @param href - CSS selector for the target element
  * @param offset - Pixels to offset from the top (default: 80)
  */
@@ -11,15 +16,17 @@ export function scrollToSection(href: string, offset: number = 80): void {
     return;
   }
 
-  try {
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - offset;
+  window.dispatchEvent(new Event(SKIP_ANIMATIONS_EVENT));
 
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth',
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      try {
+        const top =
+          element.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      } catch (error) {
+        console.error(`Error scrolling to ${href}:`, error);
+      }
     });
-  } catch (error) {
-    console.error(`Error scrolling to ${href}:`, error);
-  }
+  });
 }
