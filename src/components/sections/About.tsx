@@ -8,7 +8,7 @@ import { useAOSVisibility } from '@/hooks/useAOSVisibility';
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
 import { useCallback, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 interface Highlight {
   icon: string;
@@ -30,6 +30,8 @@ const iconColorMap: Record<string, string> = {
 export default function About() {
   const t = useTranslations('sections.about');
   const personalInfo = useTranslations('personal_info');
+  const locale = useLocale();
+  const cvFile = `/CV-Julio-${locale.toUpperCase()}.pdf`;
   const [showContent, setShowContent] = useState(false);
   const { ref, shouldRender, eagerReveal } = useAOSVisibility({ threshold: 0.2 });
   const contentVisible = showContent || eagerReveal;
@@ -108,8 +110,8 @@ export default function About() {
                 className="mt-8"
               >
                 <a
-                  href="/CV-Julio.pdf"
-                  download="CV-Julio.pdf"
+                  href={cvFile}
+                  download
                   className="inline-flex items-center gap-2 rounded border border-gopher-blue px-4 py-2 text-sm text-gopher-blue transition-colors hover:bg-gopher-blue hover:text-black"
                 >
                   <Download className="h-4 w-4" />

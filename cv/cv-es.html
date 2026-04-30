@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Julio Sánchez Aniceto - CV</title>
+<style>
+  @page { size: A4; margin: 12mm 14mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin: 0;
+  }
+  h1 {
+    font-size: 22pt;
+    margin: 0 0 2pt;
+    font-weight: 700;
+    letter-spacing: -0.3pt;
+  }
+  .title {
+    font-size: 11.5pt;
+    color: #007d9c;
+    font-weight: 600;
+    margin-bottom: 4pt;
+  }
+  .contact {
+    font-size: 9pt;
+    color: #444;
+    margin-bottom: 8pt;
+  }
+  .contact a { color: #007d9c; text-decoration: none; }
+  .contact span.sep { color: #aaa; margin: 0 4pt; }
+  h2 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8pt;
+    color: #007d9c;
+    margin: 10pt 0 3pt;
+    padding-bottom: 1.5pt;
+    border-bottom: 1pt solid #007d9c;
+  }
+  h3 {
+    font-size: 10.5pt;
+    font-weight: 600;
+    margin: 6pt 0 0;
+  }
+  .role-meta {
+    font-size: 9pt;
+    color: #555;
+    margin-bottom: 2pt;
+  }
+  ul { margin: 2pt 0 3pt 14pt; padding: 0; }
+  li { margin-bottom: 1.5pt; }
+  p { margin: 1pt 0 2pt; }
+  .stack {
+    font-size: 9pt;
+    color: #555;
+    margin-top: 1pt;
+  }
+  .stack b { color: #1a1a1a; font-weight: 600; }
+  .summary { font-size: 10pt; margin-bottom: 4pt; line-height: 1.45; }
+  .skills-row, .lang-row {
+    margin-bottom: 1.5pt;
+    font-size: 9.5pt;
+  }
+  .skills-row b, .lang-row b { color: #1a1a1a; font-weight: 600; }
+  .project { margin-top: 5pt; }
+  .project h3 { display: inline; }
+  .project .link { font-size: 9pt; color: #007d9c; margin-left: 4pt; }
+  .project p { font-size: 9.5pt; margin: 1pt 0; }
+</style>
+</head>
+<body>
+
+<h1>Julio Sánchez Aniceto</h1>
+<div class="title">Full Stack Web Developer</div>
+<div class="contact">
+  Palma de Mallorca, España<span class="sep">·</span>
+  julio264edu@gmail.com<span class="sep">·</span>
+  +34 631 559 311<br>
+  <a href="https://julio-sanchez.vercel.app">julio-sanchez.vercel.app</a><span class="sep">·</span>
+  <a href="https://github.com/juliosnchz264">github.com/juliosnchz264</a><span class="sep">·</span>
+  <a href="https://www.linkedin.com/in/julio-s%C3%A1nchez-aniceto-453738276/">LinkedIn</a>
+</div>
+
+<h2>Resumen</h2>
+<p class="summary">
+  Desarrollador Full Stack formado en DAW con 2+ años de experiencia construyendo
+  aplicaciones web end-to-end en PHP, JavaScript y React. Especializado en
+  ciberseguridad (Cert. Profesionalidad Nivel 3, SOIB) con dominio práctico de
+  herramientas de pentesting y desarrollo seguro. Cómodo del SQL al UI, con
+  proyectos open source en stacks modernos: Next.js, Supabase, Payload CMS y Node.js.
+</p>
+
+<h2>Experiencia</h2>
+
+<h3>Junior Web Developer · Refinería Web</h3>
+<div class="role-meta">Palma de Mallorca · Marzo 2024 – Junio 2024</div>
+<ul>
+  <li>Desarrollé sitios WordPress y aplicaciones web a medida con stack PHP + React, cubriendo el ciclo completo desde requisitos a despliegue.</li>
+  <li>Optimicé rendimiento y maquetación responsiva en proyectos en producción, mejorando tiempos de carga y experiencia cross-device.</li>
+  <li>Implementé nuevas funcionalidades sobre temas y plugins WordPress existentes en clientes reales, integrando Bootstrap y librerías JS modernas.</li>
+</ul>
+<div class="stack"><b>Stack:</b> PHP, WordPress, JavaScript, React, HTML/CSS, Bootstrap, Git.</div>
+
+<h3>Junior Web Developer (Prácticas) · ITCM Solutions</h3>
+<div class="role-meta">Palma de Mallorca · Febrero 2022 – Abril 2022</div>
+<ul>
+  <li>Construí plantillas web responsivas para listings de hardware en eBay, integrando inventario físico con catálogo digital.</li>
+  <li>Diseñé y consulté bases de datos MySQL para gestión de productos e-commerce.</li>
+</ul>
+<div class="stack"><b>Stack:</b> PHP, MySQL, JavaScript, HTML/CSS, Bootstrap, Git.</div>
+
+<h2>Proyectos Open Source</h2>
+
+<div class="project">
+  <h3>Portfolio Personal</h3>
+  <span class="link">julio-sanchez.vercel.app</span>
+  <p>SSG bilingüe con blog técnico MDX, animaciones tipo terminal y sistema de diseño propio.</p>
+  <div class="stack"><b>Stack:</b> Next.js 15 (App Router), React 19, TypeScript, Tailwind 4, next-intl, MDX + Shiki, Framer Motion.</div>
+</div>
+
+<div class="project">
+  <h3>CMS Headless Monorepo</h3>
+  <span class="link">github.com/juliosnchz264</span>
+  <p>Arquitectura monorepo con backend headless y dos frontends desacoplados, demostrando integración entre stacks distintos sobre un mismo CMS.</p>
+  <div class="stack"><b>Stack:</b> Next.js, Payload CMS, Astro, TypeScript.</div>
+</div>
+
+<div class="project">
+  <h3>Red Social Full Stack</h3>
+  <span class="link">github.com/juliosnchz264</span>
+  <p>Aplicación social con autenticación, gestión de estado server/client y BBDD relacional gestionada vía Supabase.</p>
+  <div class="stack"><b>Stack:</b> React, TanStack Query, Zustand, Tailwind CSS, Supabase (PostgreSQL).</div>
+</div>
+
+<div class="project">
+  <h3>E-commerce Full Stack</h3>
+  <span class="link">github.com/juliosnchz264</span>
+  <p>Tienda online con catálogo, carrito y backend REST. Frontend desplegado en Vercel, API en Render. Persistencia NoSQL.</p>
+  <div class="stack"><b>Stack:</b> Node.js, MongoDB, React, Vite, Tailwind CSS.</div>
+</div>
+
+<h2>Formación</h2>
+<h3>Certificado de Profesionalidad Nivel 3 — Ciberseguridad · SOIB · 2025</h3>
+<p>Pentesting, desarrollo seguro, análisis de vulnerabilidades, hardening de redes.</p>
+
+<h3>Curso Especialización en Bases de Datos · 2025 (en curso)</h3>
+
+<h3>Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</h3>
+<p>Especialización en desarrollo full stack y bases de datos.</p>
+
+<h2>Stack Técnico</h2>
+<div class="skills-row"><b>Lenguajes:</b> JavaScript, TypeScript, PHP, Python, Java, HTML, CSS</div>
+<div class="skills-row"><b>Frontend:</b> React, Next.js, Astro, Tailwind CSS, TanStack Query, Zustand, Vite, WordPress</div>
+<div class="skills-row"><b>Backend:</b> Node.js, Laravel, Flask, Payload CMS</div>
+<div class="skills-row"><b>Bases de Datos:</b> PostgreSQL, MySQL, MariaDB, Supabase, MongoDB</div>
+<div class="skills-row"><b>DevOps & Deploy:</b> Docker, Linux (Debian/Kali), SSH, Git, Vercel, Render</div>
+<div class="skills-row"><b>Conceptos:</b> Clean Code, REST APIs, MVC, OOP, diseño BBDD, desarrollo seguro</div>
+
+<h2>Ciberseguridad</h2>
+<div class="skills-row"><b>Pentesting & Análisis:</b> Nmap, Wireshark, SQLmap, Hydra, Aircrack-ng</div>
+<div class="skills-row"><b>Sistemas:</b> Kali Linux, Debian, hardening de servidores, configuración SSH, Docker en producción</div>
+<div class="skills-row"><b>Redes:</b> Modelo OSI, hardening de red, vulnerabilidades Windows</div>
+<div class="skills-row"><b>Aplicado:</b> integración de buenas prácticas de seguridad en desarrollo web</div>
+
+<h2>Idiomas</h2>
+<div class="lang-row"><b>Español</b> — Nativo</div>
+<div class="lang-row"><b>Inglés</b> — B2 (Intermedio Alto)</div>
+<div class="lang-row"><b>Alemán</b> — A2 (Básico)</div>
+
+<h2>Otros</h2>
+<p>Disponibilidad inmediata · Movilidad geográfica / remoto · Carnet de conducir</p>
+
+</body>
+</html>
