@@ -7,7 +7,7 @@ import TerminalWindow from '@/components/TerminalWindow';
 import { ANIMATION_DELAYS } from '@/constants/animations';
 import { useAOSVisibility } from '@/hooks/useAOSVisibility';
 import { cn } from '@/lib/utils';
-import { BookOpen, Terminal } from 'lucide-react';
+import { BookOpen, Code2, Container, Database, LayoutDashboard, Server } from 'lucide-react';
 import { useCallback, useMemo, useState } from 'react';
 
 import { useTranslations } from 'next-intl';
@@ -18,14 +18,19 @@ interface SkillCategory {
 }
 
 interface SkillsCategories {
+  languages: SkillCategory;
+  frontend: SkillCategory;
+  backend: SkillCategory;
+  databases: SkillCategory;
+  devops: SkillCategory;
   conceptual: SkillCategory;
-  technical: SkillCategory;
 }
 
 export default function Skills() {
   const t = useTranslations('sections.skills');
   const [showContent, setShowContent] = useState(false);
-  const { ref, shouldRender } = useAOSVisibility({ threshold: 0.2 });
+  const { ref, shouldRender, eagerReveal } = useAOSVisibility({ threshold: 0.2 });
+  const contentVisible = showContent || eagerReveal;
 
   const handleTypingComplete = useCallback(() => {
     setTimeout(() => setShowContent(true), ANIMATION_DELAYS.MEDIUM);
@@ -72,18 +77,38 @@ export default function Skills() {
     const iconProps = { size: 20, className: 'inline-block' };
 
     const icons: Record<string, React.ReactNode> = {
+      languages: <Code2 {...iconProps} />,
+      frontend: <LayoutDashboard {...iconProps} />,
+      backend: <Server {...iconProps} />,
+      databases: <Database {...iconProps} />,
+      devops: <Container {...iconProps} />,
       conceptual: <BookOpen {...iconProps} />,
-      technical: <Terminal {...iconProps} />,
     };
     return icons[categoryKey] || null;
   };
 
   const getCategoryColor = (categoryKey: string): string => {
     const colors: Record<string, string> = {
-      conceptual: 'text-keyword-purple',
-      technical: 'text-gopher-blue',
+      languages: 'text-yellow-400',
+      frontend: 'text-gopher-blue',
+      backend: 'text-terminal-green',
+      databases: 'text-keyword-purple',
+      devops: 'text-orange-400',
+      conceptual: 'text-secondary',
     };
     return colors[categoryKey] || 'text-secondary';
+  };
+
+  const getCategoryBorderColor = (categoryKey: string): string => {
+    const colors: Record<string, string> = {
+      languages: 'border-yellow-400',
+      frontend: 'border-gopher-blue',
+      backend: 'border-terminal-green',
+      databases: 'border-keyword-purple',
+      devops: 'border-orange-400',
+      conceptual: 'border-white/20',
+    };
+    return colors[categoryKey] || 'border-gopher-blue';
   };
 
   return (
@@ -100,7 +125,7 @@ export default function Skills() {
               onTypingComplete={handleTypingComplete}
               className="mx-auto max-w-4xl"
             >
-              {showContent && (
+              {contentVisible && (
                 <div
                   className="space-y-8 p-8"
                   data-aos="fade-up"
@@ -128,7 +153,7 @@ export default function Skills() {
                     {Object.entries(sortedCategories).map(([categoryKey, category], index) => (
                       <div
                         key={categoryKey}
-                        className="border-gopher-blue border-l-2 pl-4 md:pl-6"
+                        className={cn('border-l-2 pl-4 md:pl-6', getCategoryBorderColor(categoryKey))}
                         data-aos="fade-right"
                         data-aos-duration="500"
                         data-aos-delay={index * ANIMATION_DELAYS.STAGGER_DELAY}

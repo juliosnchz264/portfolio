@@ -100,6 +100,58 @@
       "terminal_command": "juliosn@portfolio:~$ cat ./skills_inventory.json | jq .",
       "title": "Skills",
       "categories": {
+        "languages": {
+          "name": "Languages",
+          "skills": [
+            "JavaScript",
+            "PHP",
+            "Python",
+            "Java",
+            "HTML",
+            "CSS"
+          ]
+        },
+        "frontend": {
+          "name": "Frontend",
+          "skills": [
+            "React",
+            "Next.js",
+            "Astro",
+            "TanStack Query",
+            "Zustand",
+            "Tailwind CSS",
+            "Vite",
+            "WordPress"
+          ]
+        },
+        "backend": {
+          "name": "Backend",
+          "skills": [
+            "Node.js",
+            "Laravel",
+            "Flask"
+          ]
+        },
+        "databases": {
+          "name": "Databases",
+          "skills": [
+            "PostgreSQL",
+            "MySQL",
+            "MariaDB",
+            "Supabase",
+            "MongoDB"
+          ]
+        },
+        "devops": {
+          "name": "DevOps & Deploy",
+          "skills": [
+            "Docker",
+            "Linux",
+            "Git",
+            "Vercel",
+            "Render"
+          ]
+        },
         "conceptual": {
           "name": "Concepts & Principles",
           "skills": [
@@ -112,39 +164,18 @@
             "Secure Development",
             "Version Control Workflows"
           ]
-        },
-        "technical": {
-          "name": "Technical Skills",
-          "skills": [
-            "PHP",
-            "JavaScript",
-            "Laravel",
-            "React",
-            "Python",
-            "MySQL",
-            "MongoDB",
-            "HTML & CSS",
-            "Bootstrap",
-            "Tailwind CSS",
-            "WordPress",
-            "Docker",
-            "Git & GitHub",
-            "Linux"
-          ]
         }
       },
       "highlighted_languages": ["PHP", "JavaScript"],
       "highlighted_skills": [
         "PHP",
         "JavaScript",
-        "Laravel",
         "React",
-        "MySQL",
-        "HTML & CSS",
-        "Docker",
-        "Git & GitHub",
-        "Linux",
-        "WordPress"
+        "Next.js",
+        "Laravel",
+        "Node.js",
+        "PostgreSQL",
+        "Docker"
       ],
       "expertise_level": "2+ years of academic and professional experience",
       "labels": {
