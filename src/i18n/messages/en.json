@@ -37,7 +37,7 @@
           "text": "Currently training in cybersecurity (Certificado de Profesionalidad Nivel 3 SOIB), expanding my perspective on secure development practices and vulnerability analysis."
         }
       ],
-      "cv_download": "Download CV"
+      "cv_download": "View CV"
     },
     "experience": {
       "terminal_command": "juliosn@portfolio:~$ ./career.sh --timeline",
