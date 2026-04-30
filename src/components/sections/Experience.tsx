@@ -23,7 +23,8 @@ interface Job {
 export default function Experience() {
   const t = useTranslations('sections.experience');
   const [showContent, setShowContent] = useState(false);
-  const { ref, shouldRender } = useAOSVisibility({ threshold: 0.2 });
+  const { ref, shouldRender, eagerReveal } = useAOSVisibility({ threshold: 0.2 });
+  const contentVisible = showContent || eagerReveal;
 
   const handleTypingComplete = useCallback(() => {
     setTimeout(() => setShowContent(true), ANIMATION_DELAYS.MEDIUM);
@@ -50,7 +51,7 @@ export default function Experience() {
               onTypingComplete={handleTypingComplete}
               className="mx-auto max-w-4xl"
             >
-              {showContent && (
+              {contentVisible && (
                 <div
                   className="space-y-8 p-8"
                   data-aos="fade-up"

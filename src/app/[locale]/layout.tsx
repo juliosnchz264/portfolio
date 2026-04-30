@@ -105,6 +105,11 @@ export default async function RootLayout({
     <html lang={locale}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if('scrollRestoration' in history)history.scrollRestoration='manual';`,
+          }}
+        />
       </head>
       <body className={fontClassName}>
         <StructuredData locale={locale} />

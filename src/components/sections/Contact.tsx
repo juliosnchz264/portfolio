@@ -12,14 +12,15 @@ import { useTranslations } from 'next-intl';
 export default function Contact() {
   const t = useTranslations('sections.contact');
   const [showContent, setShowContent] = useState(false);
-  const { ref, shouldRender } = useAOSVisibility({ threshold: 0.2 });
+  const { ref, shouldRender, eagerReveal } = useAOSVisibility({ threshold: 0.2 });
+  const contentVisible = showContent || eagerReveal;
 
   const handleTypingComplete = useCallback(() => {
     setTimeout(() => setShowContent(true), ANIMATION_DELAYS.MEDIUM);
   }, []);
 
   return (
-    <section ref={ref} id="contact" className="px-4 py-10" aria-labelledby="contact-heading">
+    <section ref={ref} id="contact" className="min-h-screen px-4 py-10" aria-labelledby="contact-heading">
       <div className="mx-auto max-w-6xl">
         <SectionTitle>{t('title')}</SectionTitle>
 
@@ -31,7 +32,7 @@ export default function Contact() {
               onTypingComplete={handleTypingComplete}
               className="mx-auto max-w-6xl"
             >
-              {showContent && (
+              {contentVisible && (
               <div
                 className="p-8"
                 data-aos="fade-up"

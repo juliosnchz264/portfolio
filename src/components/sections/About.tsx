@@ -31,7 +31,8 @@ export default function About() {
   const t = useTranslations('sections.about');
   const personalInfo = useTranslations('personal_info');
   const [showContent, setShowContent] = useState(false);
-  const { ref, shouldRender } = useAOSVisibility({ threshold: 0.2 });
+  const { ref, shouldRender, eagerReveal } = useAOSVisibility({ threshold: 0.2 });
+  const contentVisible = showContent || eagerReveal;
 
   const handleTypingComplete = useCallback(() => {
     setTimeout(() => setShowContent(true), ANIMATION_DELAYS.MEDIUM);
@@ -53,7 +54,7 @@ export default function About() {
               onTypingComplete={handleTypingComplete}
               className="mx-auto max-w-4xl"
             >
-              {showContent && (
+              {contentVisible && (
               <div className="p-8">
               {/* Header con nombre y título */}
               <div className="mb-6">

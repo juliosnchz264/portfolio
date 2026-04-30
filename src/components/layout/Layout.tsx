@@ -1,6 +1,7 @@
 'use client';
 
 import { MobileMenuProvider, useMobileMenu } from '@/contexts/MobileMenuContext';
+import { useScrollMemory } from '@/hooks/useScrollMemory';
 import { cn } from '@/lib/utils';
 
 import { useEffect } from 'react';
@@ -20,6 +21,8 @@ interface LayoutProps {
 
 function LayoutContent({ children, className = '' }: LayoutProps) {
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useMobileMenu();
+
+  useScrollMemory();
 
   useEffect(() => {
     AOS.init({
