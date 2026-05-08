@@ -69,7 +69,7 @@
   .skills-row b, .lang-row b { color: #1a1a1a; font-weight: 600; }
   .project { margin-top: 5pt; }
   .project h3 { display: inline; }
-  .project .link { font-size: 9pt; color: #007d9c; margin-left: 4pt; }
+  .project .link { font-size: 9pt; color: #007d9c; margin-left: 4pt; text-decoration: none; }
   .project p { font-size: 9.5pt; margin: 1pt 0; }
 </style>
 </head>
@@ -89,10 +89,11 @@
 <h2>Resumen</h2>
 <p class="summary">
   Desarrollador Full Stack formado en DAW con 2+ años de experiencia construyendo
-  aplicaciones web end-to-end en PHP, JavaScript y React. Especializado en
-  ciberseguridad (Cert. Profesionalidad Nivel 3, SOIB) con dominio práctico de
-  herramientas de pentesting y desarrollo seguro. Cómodo del SQL al UI, con
-  proyectos open source en stacks modernos: Next.js, Supabase, Payload CMS y Node.js.
+  aplicaciones web end-to-end en Java/Spring Boot, Node.js, PHP y React/Next.js.
+  Especializado en ciberseguridad (Cert. Profesionalidad Nivel 3, SOIB) con
+  dominio práctico de herramientas de pentesting y desarrollo seguro. Cómodo
+  del SQL al UI, con proyectos open source que cubren autenticación JWT,
+  arquitecturas de monolito modular, pipelines CI/CD y despliegues en Docker.
 </p>
 
 <h2>Experiencia</h2>
@@ -117,29 +118,38 @@
 <h2>Proyectos Open Source</h2>
 
 <div class="project">
+  <h3>MovieReviewHub — Catálogo de Películas Full Stack</h3>
+  <a class="link" href="https://movie-review-hub-tau.vercel.app">movie-review-hub-tau.vercel.app</a>
+  <p>Catálogo de películas end-to-end con reseñas, valoraciones, favoritos e integración con TMDB. Auth JWT con rotación de refresh tokens, backend monolito modular, rate limiting, logs JSON estructurados, tests de integración con Testcontainers y CI en cada push.</p>
+  <div class="stack"><b>Backend:</b> Java 21, Spring Boot 3.5, Spring Security, Spring Data JPA, PostgreSQL, Flyway, JJWT, Springdoc OpenAPI, Bucket4j, Logstash JSON logs, Testcontainers, JUnit 5, Mockito.</div>
+  <div class="stack"><b>Frontend:</b> Next.js 16 (App Router), TypeScript, TailwindCSS, shadcn/ui, TanStack Query, Zustand, axios.</div>
+  <div class="stack"><b>Infra:</b> Docker (multi-stage, non-root), docker-compose, GitHub Actions, Render, Vercel, Supabase.</div>
+</div>
+
+<div class="project">
   <h3>Portfolio Personal</h3>
-  <span class="link">julio-sanchez.vercel.app</span>
+  <a class="link" href="https://julio-sanchez.vercel.app">julio-sanchez.vercel.app</a>
   <p>SSG bilingüe con blog técnico MDX, animaciones tipo terminal y sistema de diseño propio.</p>
   <div class="stack"><b>Stack:</b> Next.js 15 (App Router), React 19, TypeScript, Tailwind 4, next-intl, MDX + Shiki, Framer Motion.</div>
 </div>
 
 <div class="project">
   <h3>CMS Headless Monorepo</h3>
-  <span class="link">github.com/juliosnchz264</span>
+  <a class="link" href="https://github.com/juliosnchz264">github.com/juliosnchz264</a>
   <p>Arquitectura monorepo con backend headless y dos frontends desacoplados, demostrando integración entre stacks distintos sobre un mismo CMS.</p>
   <div class="stack"><b>Stack:</b> Next.js, Payload CMS, Astro, TypeScript.</div>
 </div>
 
 <div class="project">
   <h3>Red Social Full Stack</h3>
-  <span class="link">github.com/juliosnchz264</span>
+  <a class="link" href="https://github.com/juliosnchz264">github.com/juliosnchz264</a>
   <p>Aplicación social con autenticación, gestión de estado server/client y BBDD relacional gestionada vía Supabase.</p>
   <div class="stack"><b>Stack:</b> React, TanStack Query, Zustand, Tailwind CSS, Supabase (PostgreSQL).</div>
 </div>
 
 <div class="project">
   <h3>E-commerce Full Stack</h3>
-  <span class="link">github.com/juliosnchz264</span>
+  <a class="link" href="https://julio-dev-market.vercel.app">julio-dev-market.vercel.app</a>
   <p>Tienda online con catálogo, carrito y backend REST. Frontend desplegado en Vercel, API en Render. Persistencia NoSQL.</p>
   <div class="stack"><b>Stack:</b> Node.js, MongoDB, React, Vite, Tailwind CSS.</div>
 </div>
@@ -153,13 +163,13 @@
 
 <h3>Curso Especialización en Bases de Datos · 2026 (en curso)</h3>
 
-<h2>Stack Técnico</h2>
-<div class="skills-row"><b>Lenguajes:</b> JavaScript, TypeScript, PHP, Python, Java, HTML, CSS</div>
-<div class="skills-row"><b>Frontend:</b> React, Next.js, Astro, Tailwind CSS, TanStack Query, Zustand, Vite, WordPress</div>
-<div class="skills-row"><b>Backend:</b> Node.js, Laravel, Flask, Payload CMS</div>
-<div class="skills-row"><b>Bases de Datos:</b> PostgreSQL, MySQL, MariaDB, Supabase, MongoDB</div>
-<div class="skills-row"><b>DevOps & Deploy:</b> Docker, Linux (Debian/Kali), SSH, Git, Vercel, Render</div>
-<div class="skills-row"><b>Conceptos:</b> Clean Code, REST APIs, MVC, OOP, diseño BBDD, desarrollo seguro</div>
+<h2>Habilidades Técnicas</h2>
+<div class="skills-row"><b>Lenguajes:</b> Java, JavaScript, PHP, Python.</div>
+<div class="skills-row"><b>Frontend:</b> React, Next.js, Astro, TanStack Query, Zustand, Tailwind CSS.</div>
+<div class="skills-row"><b>Backend:</b> Spring (Boot, Security, Data JPA), Node.js, Laravel, Flask.</div>
+<div class="skills-row"><b>Bases de Datos & Cloud:</b> PostgreSQL, MySQL, MongoDB, Supabase.</div>
+<div class="skills-row"><b>DevOps & Herramientas:</b> Docker, GitHub Actions, Git, Linux, Vercel, Render.</div>
+<div class="skills-row"><b>Testing:</b> JUnit 5, Mockito, Testcontainers.</div>
 
 <h2>Ciberseguridad</h2>
 <div class="skills-row"><b>Pentesting & Análisis:</b> Nmap, Wireshark, SQLmap, Hydra, Aircrack-ng</div>

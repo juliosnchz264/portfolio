@@ -7,7 +7,7 @@
     "age": "23",
     "experience_years": "2",
     "specialization": "Full Stack Web Development",
-    "preference": "PHP, JavaScript, Laravel, Cybersecurity"
+    "preference": "Java, Spring Boot, TypeScript, Next.js, Cybersecurity"
   },
   "sections": {
     "hero": {
@@ -15,13 +15,13 @@
       "name": "Julio Sánchez Aniceto",
       "title": "Junior Web Developer",
       "description": "Building web applications with clean code and responsive design. Currently specializing in cybersecurity and secure web development practices.",
-      "specialties": ["Full Stack Development", "PHP & JavaScript", "MySQL & MongoDB", "Cybersecurity"],
+      "specialties": ["Full Stack Development", "Java & Spring Boot", "TypeScript & Next.js", "Cybersecurity"],
       "cta": "Explore my work and experience"
     },
     "about": {
       "terminal_command": "juliosn@portfolio:~$ cat about.txt",
       "title": "About Me",
-      "badges": ["Web Developer", "PHP", "JavaScript", "Cybersecurity"],
+      "badges": ["Full Stack", "Java / Spring Boot", "TypeScript / Next.js", "Cybersecurity"],
       "intro": "Junior web developer based in Palma, Spain, trained in Full Stack Web Development (DAW). I build web applications using modern frontend and backend technologies, and I'm currently specializing in cybersecurity with a focus on secure development and vulnerability analysis.",
       "highlights": [
         {
@@ -30,7 +30,7 @@
         },
         {
           "icon": "diamond",
-          "text": "My approach is practical: understand the problem, choose the right tool, and build a solid solution. I've worked with PHP, JavaScript, Laravel, React, MySQL, MongoDB, and more."
+          "text": "My approach is practical: understand the problem, choose the right tool, and build a solid solution. I've worked with Java, Spring Boot, TypeScript, Next.js, PostgreSQL, Docker, and more."
         },
         {
           "icon": "arrow",
@@ -103,12 +103,10 @@
         "languages": {
           "name": "Languages",
           "skills": [
+            "Java",
             "JavaScript",
             "PHP",
-            "Python",
-            "Java",
-            "HTML",
-            "CSS"
+            "Python"
           ]
         },
         "frontend": {
@@ -119,63 +117,56 @@
             "Astro",
             "TanStack Query",
             "Zustand",
-            "Tailwind CSS",
-            "Vite",
-            "WordPress"
+            "Tailwind CSS"
           ]
         },
         "backend": {
           "name": "Backend",
           "skills": [
+            "Spring (Boot, Security, Data JPA)",
             "Node.js",
             "Laravel",
             "Flask"
           ]
         },
         "databases": {
-          "name": "Databases",
+          "name": "Databases & Cloud",
           "skills": [
             "PostgreSQL",
             "MySQL",
-            "MariaDB",
-            "Supabase",
-            "MongoDB"
+            "MongoDB",
+            "Supabase"
           ]
         },
         "devops": {
-          "name": "DevOps & Deploy",
+          "name": "DevOps & Tools",
           "skills": [
             "Docker",
-            "Linux",
+            "GitHub Actions",
             "Git",
+            "Linux",
             "Vercel",
             "Render"
           ]
         },
-        "conceptual": {
-          "name": "Concepts & Principles",
+        "testing": {
+          "name": "Testing",
           "skills": [
-            "Responsive Web Design",
-            "Clean Code Principles",
-            "RESTful API Design",
-            "MVC Architecture",
-            "Object Oriented Programming",
-            "Database Design",
-            "Secure Development",
-            "Version Control Workflows"
+            "JUnit 5",
+            "Mockito",
+            "Testcontainers"
           ]
         }
       },
-      "highlighted_languages": ["PHP", "JavaScript"],
+      "highlighted_languages": ["Java", "JavaScript"],
       "highlighted_skills": [
-        "PHP",
-        "JavaScript",
-        "React",
+        "Java",
+        "Spring (Boot, Security, Data JPA)",
         "Next.js",
-        "Laravel",
-        "Node.js",
+        "React",
         "PostgreSQL",
-        "Docker"
+        "Docker",
+        "GitHub Actions"
       ],
       "expertise_level": "2+ years of academic and professional experience",
       "labels": {
@@ -202,7 +193,7 @@
       "no_posts": "No posts available yet. Come back soon!",
       "page": {
         "title": "Personal Blog",
-        "description": "Technical insights, development experiences, and thoughts about web development and cybersecurity. Notes on PHP, JavaScript, Laravel, and secure web practices."
+        "description": "Technical insights, development experiences, and thoughts about web development and cybersecurity. Notes on Java, Spring Boot, TypeScript, Next.js, and secure web practices."
       },
       "post": {
         "back_to_blog": "← Back to blog",

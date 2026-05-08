@@ -7,7 +7,7 @@ import TerminalWindow from '@/components/TerminalWindow';
 import { ANIMATION_DELAYS } from '@/constants/animations';
 import { useAOSVisibility } from '@/hooks/useAOSVisibility';
 import { cn } from '@/lib/utils';
-import { BookOpen, Code2, Container, Database, LayoutDashboard, Server } from 'lucide-react';
+import { Code2, Container, Database, FlaskConical, LayoutDashboard, Server } from 'lucide-react';
 import { useCallback, useMemo, useState } from 'react';
 
 import { useTranslations } from 'next-intl';
@@ -23,7 +23,7 @@ interface SkillsCategories {
   backend: SkillCategory;
   databases: SkillCategory;
   devops: SkillCategory;
-  conceptual: SkillCategory;
+  testing: SkillCategory;
 }
 
 export default function Skills() {
@@ -82,7 +82,7 @@ export default function Skills() {
       backend: <Server {...iconProps} />,
       databases: <Database {...iconProps} />,
       devops: <Container {...iconProps} />,
-      conceptual: <BookOpen {...iconProps} />,
+      testing: <FlaskConical {...iconProps} />,
     };
     return icons[categoryKey] || null;
   };
@@ -94,7 +94,7 @@ export default function Skills() {
       backend: 'text-terminal-green',
       databases: 'text-keyword-purple',
       devops: 'text-orange-400',
-      conceptual: 'text-secondary',
+      testing: 'text-pink-400',
     };
     return colors[categoryKey] || 'text-secondary';
   };
@@ -106,7 +106,7 @@ export default function Skills() {
       backend: 'border-terminal-green',
       databases: 'border-keyword-purple',
       devops: 'border-orange-400',
-      conceptual: 'border-white/20',
+      testing: 'border-pink-400',
     };
     return colors[categoryKey] || 'border-gopher-blue';
   };
